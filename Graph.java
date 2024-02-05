@@ -7,8 +7,10 @@ import java.util.Map;
 
 public class Graph {
 
+    // Hashmap to store username - person object pair.
     private Map<String, Person> people = new HashMap<>();
 
+    // Hashmap to store person - connections pair.
     private Map<Person, List<Person>> connections = new HashMap<>();
 
     private class Person {
@@ -53,6 +55,11 @@ public class Graph {
     }
 
     public void displayConnections() {
+        /* 
+         * Displays the whole connection graph of the app.
+         * Time complexity: 0(n) 
+         */
+        
         for (Person person : connections.keySet()) {
             if (!connections.get(person).isEmpty()) {
                 System.out.println(person + " is connected to: " + connections.get(person));
@@ -61,6 +68,8 @@ public class Graph {
     }
 
     public void displayConnectionsOf(String userName) {
+        // Displays all connections of a single person
+        
         Person person = people.get(userName);
 
         System.out.println(userName + " is connected with: " + connections.get(person));
@@ -78,6 +87,11 @@ public class Graph {
     }
 
     public void removeConnection(String from, String to) {
+        /* 
+         * Removes connection from Person A to Person B. Similar to unfollow feature.
+         * Person B will still have a connection to Person A
+         */
+        
         Person fromPerson = people.get(from);
         Person toPerson = people.get(to);
 
