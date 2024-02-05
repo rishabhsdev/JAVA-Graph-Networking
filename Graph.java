@@ -77,6 +77,11 @@ public class Graph {
 
     public void removePerson(String userName) {
 
+        /* 
+         * Removes a Person from the Network. 
+         * All references to the deleted person will be removed from connections of other people.
+         */
+
         connections.remove(people.get(userName));
 
         for (Person person : connections.keySet()) {
@@ -99,6 +104,9 @@ public class Graph {
     }
 
     public void findConnectionGraph(String userName) {
+        /*
+         * Similar to displayConnections() except it displays the whole connection graph of a single person.
+         */
 
         Person person = people.get(userName);
         List<Person> connectedPersons = connections.get(person);
