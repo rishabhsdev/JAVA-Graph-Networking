@@ -1,4 +1,6 @@
 # JAVA-Graph-Networking
-Behind the scene working of Networking feature (Follow/Connect) on Social Media sites, like Instagram or LinkedIn.
+This code tries to showcase behind the scene working of Networking feature (Follow/Connect) on Social Media sites, like Instagram or LinkedIn.
 
-Uses HashMaps and ArrayLists.
+It Uses HashMaps and ArrayLists to store each Person objects.
+
+Project is currently under development.
